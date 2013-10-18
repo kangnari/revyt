@@ -1,4 +1,4 @@
-Revyt::Application.routes.draw 
+Revyt::Application.routes.draw do
   root 'static_pages#landing_page'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
