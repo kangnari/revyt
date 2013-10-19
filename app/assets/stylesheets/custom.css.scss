@@ -21,6 +21,7 @@
 .hero-unit {
 	background: #53ace9;
 	padding-bottom: 0px;
+	margin-bottom: 0px;
 	color: white;
 	h1 {
 		font-family: allerta;
@@ -32,6 +33,7 @@
 		font-family: droid+sans;
 		font-size: 1.5em;
 		font-weight: 400;
+		padding-bottom: 10px;
 	}
 	h4 {
 		font-family: droid+sans;
@@ -43,6 +45,19 @@
 
 form {
 	margin-bottom: 0px;
+}
+
+.input-xlarge {
+	width: 330px;
+	margin-right: 10px;
+}
+
+input[type="email"] {
+	height:30px;
+}
+
+.move-up {
+	margin-top: -205px;
 }
 
 .btn {
@@ -59,3 +74,39 @@ form {
 		color: white;
 	}
 }
+
+/** footer **/
+.footer-icon {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background: transparent url('contact-buttons.png') no-repeat;
+	margin: 60px 10px;
+
+}
+
+.twitter-icon {
+	background-position: 0px 0px;
+	&:hover {
+		background: transparent url('contact-buttons.png') no-repeat;
+		background-position: -300px 0px;
+	}
+}
+.facebook-icon {
+	background-position: -100px 0px;
+	&:hover {
+		background: transparent url('contact-buttons.png') no-repeat;
+		background-position: -400px 0px;
+	}
+}
+
+.email-icon {
+	background-position: -200px 0px;
+	&:hover {
+		background: transparent url('contact-buttons.png') no-repeat;
+		background-position: -500px 0px;
+	}
+}
+
+
+/** end footer **/
