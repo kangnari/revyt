@@ -1,2 +1,26 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Allerta);
+
+.hero-unit {
+	background: #53ace9;
+	padding-bottom: 0px;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.navbar-inner {
+	height: 170px;
+	background: transparent;
+	box-shadow: none;
+	border:none;
+}
+
+.btn {
+	background: #ffa601;
+	color: white;
+	&:hover {
+		background: #ffd801;
+	}
+}
