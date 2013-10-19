@@ -1,26 +1,51 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Allerta);
 
-.hero-unit {
-	background: #53ace9;
-	padding-bottom: 0px;
-}
-
+/** navbar **/
 .navbar {
+	padding-top: 50px;
 	margin-bottom: 0px;
 }
 
 .navbar-inner {
-	height: 170px;
+	height: 120px;
 	background: transparent;
 	box-shadow: none;
 	border:none;
 }
+/** end navbar **/
+
+
+.hero-unit {
+	background: #53ace9;
+	padding-bottom: 0px;
+	color: white;
+	h1 {
+		font-family: allerta;
+		font-size: 2.25em;
+		font-weight: 200;
+	}
+	h2 {
+		font-family: droid+sans;
+		font-size: 1.5em;
+		font-weight: 200;
+	}
+	h4 {
+		font-family: droid+sans;
+		font-size: 1.25em;
+		font-weight: 200;
+	}
+}
 
 .btn {
+	font-family: droid+sans;
 	background: #ffa601;
 	color: white;
+	text-shadow: none;
+	box-shadow: none;
+	border: none;
 	&:hover {
 		background: #ffd801;
+		color: white;
 	}
 }
