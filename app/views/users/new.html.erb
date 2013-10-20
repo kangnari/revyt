@@ -19,13 +19,13 @@
 						<h4> Plan, edit, record, and share your day without ever touching a calendar. </h4>
 						<h2><font color = "#ffa601" style="font-weight: 700"> Sign up</font> to become a beta tester. </h2>
 						<form class="form-inline">
-							<%= form_for(@user) do |f| %>
+							<%= form_for @user, :method => :post do |f| %>
 								<%= f.text_field :email, type: "email", class: "input-xlarge", placeholder: "Email"%>
 								<%= f.submit "Get me started!", class: "btn btn-large" %>
 							<% end %>
 						</form>
 
-						<small style = "color: black">
+						<small>
 							Revyt does not disclose your personal information.
 							<a href = "#privacyStatement" role="button" data-toggle="modal"> Privacy Statement </a>
 						</small>
