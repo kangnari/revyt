@@ -1,10 +1,12 @@
 require 'spec_helper'
 
 describe "User pages" do
+
+	subject { page }
+
 	describe "Home page" do
-		it "should have the h1 'Your day'" do
-			visit 'root_path'
-			expect(page).to have_content('Your day')
-		end
+		before { visit root_path }
+
+		it { should have_content('Your day') }
 	end
 end
