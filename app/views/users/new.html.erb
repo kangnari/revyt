@@ -4,6 +4,7 @@
 <div class="row">
 	<div class="span6 offset3">
 		<%= form_for(@user) do |f| %>
+			<%= render 'shared/error_messages' %>
 			<%= f.text_field :name, class: "input-xlarge", placeholder: "Name" %>
 			<%= f.text_field :email, type: "email", class: "input-xlarge", placeholder: "Email" %>
 			<%= f.password_field :password, type: "text", class: "input-xlarge", placeholder: "Password" %>

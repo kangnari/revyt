@@ -26,13 +26,11 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    logger.debug "New user: #{@user.attributes.inspect}"
-    logger.debug "User should be valid: #{@user.valid?}"
     respond_to do |format|
       if @user.save
-        logger.debug "The post was saved and now the user is going to be redirected..."
+        flash[:success] = "Welcome to Revyt!"
         # Tell the UserMailer to send a welcome Email after save
-        format.html { redirect_to '/thankyou' }
+        format.html { redirect_to @user }
         format.json { head :no_content }
       else
         format.html { render action: 'new' }
