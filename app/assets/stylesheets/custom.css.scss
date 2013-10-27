@@ -1,6 +1,8 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Allerta);
 
+/*** LANDING PAGE ***/
+
 /** navbar **/
 .navbar {
 	padding-top: 50px;
@@ -37,6 +39,9 @@
 		font-size: 1.5em;
 		font-weight: 400;
 		padding-bottom: 10px;
+		.btn-group {
+			display: inline-block;
+		}
 	}
 	h4 {
 		font-family: droid+sans;
@@ -59,6 +64,10 @@ input[type="email"] {
 	height:30px;
 }
 
+input[type="text"] {
+	height:30px;
+}
+
 .move-up {
 	margin-top: -205px;
 }
@@ -77,13 +86,19 @@ input[type="email"] {
 		color: white;
 	}
 }
+
 /** end main body **/
 
 
 /** modal **/
 .modal {
 	color: black;
+	.modal-header {
+		background: #ffa601;
+		color: white;
+	}
 }
+
 /** end modal **/
 
 
@@ -120,5 +135,58 @@ input[type="email"] {
 	}
 }
 
-
 /** end footer **/
+
+
+
+/*** USER PAGES ***/
+
+/* sidebar */
+aside {
+	section {
+		padding: 10px 0;
+		border-top: 1px solid;
+		&:first-child {
+			border: 0;
+			padding-top: 0;
+		}
+		span {
+			display: block;
+			margin-bottom: 3px;
+			line-height: 1;
+		}
+		h1 {
+			font-size: 1.4em;
+			text-align: left;
+			letter-spacing: -1px;
+			margin-bottom: 3px;
+			margin-top: 0px;
+		}
+	}
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+
+
+
+/* miscellaneous */
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
+

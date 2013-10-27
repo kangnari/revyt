@@ -1,7 +1,9 @@
 Revyt::Application.routes.draw do
   resources :users
-  root 'users#new'
+  root 'static_pages#landing_page'
   match '/home', to: 'static_pages#home', via: 'get'
+  match '/signup', to: 'users#new', via: 'get'
+  match '/thankyou', to: 'static_pages#temp_thank_you', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
   end
 
   # GET /users/new
@@ -25,12 +26,15 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-
+    logger.debug "New user: #{@user.attributes.inspect}"
+    logger.debug "User should be valid: #{@user.valid?}"
     respond_to do |format|
       if @user.save
+        logger.debug "The post was saved and now the user is going to be redirected..."
         # Tell the UserMailer to send a welcome Email after save
         UserMailer.thank_you_beta_email(@user).deliver
-        redirect_to "google.com"
+        format.html { redirect_to '/thankyou' }
+        format.json { head :no_content }
       else
         format.html { render action: 'new' }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -70,6 +74,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 end
