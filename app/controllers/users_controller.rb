@@ -30,7 +30,7 @@ class UsersController < ApplicationController
       if @user.save
         flash[:success] = "Welcome to Revyt!"
         # Tell the UserMailer to send a welcome Email after save
-        format.html { redirect_to @user }
+        format.html { redirect_to '/thankyou' }
         format.json { head :no_content }
       else
         format.html { render action: 'new' }
