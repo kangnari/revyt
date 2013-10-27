@@ -32,7 +32,6 @@ class UsersController < ApplicationController
       if @user.save
         logger.debug "The post was saved and now the user is going to be redirected..."
         # Tell the UserMailer to send a welcome Email after save
-        UserMailer.thank_you_beta_email(@user).deliver
         format.html { redirect_to '/thankyou' }
         format.json { head :no_content }
       else
